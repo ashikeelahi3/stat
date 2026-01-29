@@ -48,7 +48,7 @@ export default function Navbar() {
     >
       <nav
         className={cn(
-          "relative flex items-center justify-between transition-all duration-700 px-8 py-3 rounded-3xl border",
+          "relative flex items-center justify-between transition-all duration-700 px-3 md:px-6 py-2 md:py-3 rounded-3xl border",
           // Premium Light Mode Glass
           "bg-white/80 backdrop-blur-2xl border-gray-200/50 shadow-[0_8px_32px_0_rgba(0,0,0,0.06)] ring-1 ring-gray-200/30",
           // Premium Dark Mode Glass - FIXED
@@ -61,13 +61,13 @@ export default function Navbar() {
           <motion.div
             whileHover={{ scale: 1.15, rotate: 8 }}
             whileTap={{ scale: 0.85 }}
-            className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 dark:bg-white backdrop-blur-sm shadow-2xl text-white dark:text-slate-900 ring-2 ring-white/20 dark:ring-slate-900/20"
+            className="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-2xl bg-slate-900 dark:bg-white backdrop-blur-sm shadow-2xl text-white dark:text-slate-900 ring-2 ring-white/20 dark:ring-slate-900/20"
           >
-            <span className="text-xl font-black tracking-wider">S</span>
+            <span className="text-sm md:text-xl font-black tracking-wider">
+              S
+            </span>
           </motion.div>
-          <span className="text-xl font-black tracking-tight hidden sm:block text-gray-900 dark:text-white">
-            STAT
-          </span>
+          
         </Link>
 
         {/* --- DESKTOP NAVIGATION --- */}
@@ -125,10 +125,10 @@ export default function Navbar() {
             variant="ghost"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="rounded-full cursor-pointer w-11 h-11 bg-gray-100/60 dark:bg-white/10 hover:bg-gray-200/80 dark:hover:bg-white/20 border border-gray-200/60 dark:border-white/20 shadow-lg transition-all duration-300 backdrop-blur-xl ring-1 ring-gray-200/30 dark:ring-white/10"
+            className="rounded-full cursor-pointer w-8 h-8 md:w-11 md:h-11 bg-gray-100/60 dark:bg-white/10 hover:bg-gray-200/80 dark:hover:bg-white/20 border border-gray-200/60 dark:border-white/20 shadow-lg transition-all duration-300 backdrop-blur-xl ring-1 ring-gray-200/30 dark:ring-white/10"
           >
-            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-amber-500" />
-            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-indigo-400" />
+            <Sun className="h-4 w-4 md:h-5 md:w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-amber-500" />
+            <Moon className="absolute h-4 w-4 md:h-5 md:w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-indigo-400" />
           </Button>
           <Button
             variant="ghost"
